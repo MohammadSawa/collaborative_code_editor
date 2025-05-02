@@ -1,11 +1,11 @@
 FROM node:18-alpine AS frontend-build
 WORKDIR /app
-COPY frontend/ ./
+COPY ../frontend ./
 RUN npm install && npm run build
 
 FROM maven:3.9.4-eclipse-temurin-17 AS backend-build
 WORKDIR /app
-COPY backend/ ./
+COPY ../backend ./
 COPY --from=frontend-build /app/dist ./src/main/resources/static
 RUN mvn clean package -DskipTests
 
