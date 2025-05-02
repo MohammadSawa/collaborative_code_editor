@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+.centered {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+    text-align: center;
+    color: #fff;
+    padding: 20px; /* Add some padding to avoid content touching the edges */
+}
+
+h1 {
+    margin-top: 100px; /* Position the h1 closer to the top (adjust as needed) */
+    color: #F5F5F5; 
+    font-size: 48px; /* Off-White text for h1 */
+}
+
+p {
+    font-size: 26px;
+    color: #A8D8FF;  /* Light Blue text for paragraphs */
+    margin: 10px 0; /* Add some spacing between paragraphs */
+}
+
+.editor {
+    background: #1e1e2f;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px; /* From previous adjustment */
+    margin: 20px auto; /* Center horizontally and add spacing from the paragraphs */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid #2a2a4a;
+}
+
+.editor-header {
+    background: #2a2a4a;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px 8px 0 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dots {
+    display: flex;
+    gap: 5px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.code-wrapper {
+    position: relative;
+    display: flex;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.line-numbers {
+    background: #25253a;
+    color: #666;
+    padding: 15px 10px;
+    text-align: right;
+    border-right: 1px solid #2a2a4a;
+    min-width: 40px;
+}
+
+.line-numbers span {
+    display: block;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.code-block {
+    background: #1e1e2f;
+    color: #00d4ff;
+    padding: 15px 20px;
+    border-radius: 0 0 8px 0;
+    text-align: left;
+    white-space: pre-wrap;
+    font-size: 1rem;
+    flex: 1;
+    min-height: 300px;
+}
+/* Add to Homepage.css */
+
+/* Container for login buttons */  
+.login-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px; /* Space between the editor and buttons */
+    position: absolute; /* Fix the position */
+    bottom: 50px; /* Position from the bottom of the viewport */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+}
+
+/* Base styles for login buttons */
+.login-button {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff; /* White text */
+    transition: all 0.3s ease;
+}
+
+/* Google button styles */
+.google {
+    background: #4285f4; /* Google blue */
+    border: none;
+}
+
+.google:hover {
+    background: #ffffff; /* White background on hover */
+    color: #4285f4; /* Google blue text on hover */
+}
+
+/* GitHub button styles */
+.github {
+    background: #333; /* GitHub dark gray */
+    border: none;
+}
+
+.github:hover {
+    background: #ffffff; /* White background on hover */
+    color: #333; /* GitHub dark gray text on hover */
+}
+
+/* Icon styles */
+.login-icon {
+    font-size: 20px; /* Size of the icons */
+}

@@ -1,0 +1,67 @@
+.page-wrapper {
+  background-color: #1e1e1e;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.card {
+  background-color: #2b2b2b;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.workspace-button {
+  background-color: #3a3a3a;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.workspace-button:hover {
+  background-color: #505050;
+}
+
+.workspace-input {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2e2e2e;
+  color: white;
+}
+
+.create-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+  background-color: #0056b3;
+}
+
+.error-text {
+  color: #ff4d4d;
+  font-size: 13px;
+  margin-bottom: 10px;
+}

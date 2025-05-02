@@ -1,0 +1,236 @@
+/* editorpage.module.css */
+.root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #252526;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #1e1e1e;
+  height: 50px;
+  color: white;
+  border-bottom: 1px solid #333;
+  z-index: 10;
+}
+
+.headerLeft,
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.headerCenter {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.headerIcon {
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.mainContainer {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.contentArea {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: left 0.3s ease;
+}
+
+.contentWithSidebar {
+  left: 250px; /* Match your sidebar width */
+  width: calc(100% - 250px);
+}
+
+.editorContainer {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #1e1e1e;
+}
+
+/* Added styles for Monaco editor line numbers */
+:global(.monaco-editor .margin) {
+  background-color: #1e1e1e !important;
+}
+
+:global(.monaco-editor .line-numbers) {
+  color: #1e1e1e !important;
+  line-height: 20px !important;
+}
+
+:global(.monaco-editor .view-line) {
+  line-height: 20px !important;
+  color: #1e1e1e !important;
+}
+
+.ioSection {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.inputSection,
+.outputSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+}
+
+.inputSection {
+  border-bottom: 1px solid #333;
+}
+
+.panelHeader {
+  padding: 8px 12px;
+  background-color: #252526;
+  color: white;
+  font-size: 15px;
+  padding-left: 7px;
+  border-bottom: 1px solid #333;
+}
+
+.ioTextarea {
+  flex: 1;
+  height: 40vh;
+  width: 100%;
+  background-color: #1e1e1e;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  resize: none;
+  outline: none;
+}
+
+.outputArea {
+  flex: 1;
+  overflow: auto;
+  margin: 0;
+  padding: 10px;
+  background-color: #1e1e1e;
+  color: white;
+  font-family: 'Consolas', 'Monaco', monospace;
+  white-space: pre-wrap;
+}
+
+.commit {
+  color: #FDBA74 !important;
+}
+
+.fork {
+  color: #FDBA74 !important;
+}
+.collab {
+  color: #4DA3FF !important;
+}
+
+.run {
+  color: #59B362 !important;
+}
+
+.modalOverlay {
+  position: fixed; /* Ensure it's fixed to the viewport */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #1e1e1e;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  min-width: 300px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.commitTextarea {
+  width: 100%;
+  height: 100px;
+  margin: 12px 0;
+  padding: 10px;
+  background-color: #2e2e2e;
+  border: 1px solid #444;
+  color: #fff;
+  resize: none;
+  font-family: 'Fira Code', monospace;
+  border-radius: 6px;
+  outline: none;
+}
+
+.modal:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancelButton,
+.commitButton {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancelButton {
+  background-color: #444;
+  color: white;
+}
+
+.commitButton {
+  background-color: #007acc;
+  color: white;
+}
+.history {
+  color: #005f9e; /* A vibrant green for visibility and meaning (like version history) */
+  transition: color 0.2s ease;
+}
+
+.history:hover {
+  color: #00e676; /* Slightly lighter green on hover */
+}
+
+.clone{
+  color:#5e7e7e;
+}
+
+.commented-line {
+  background-color: rgba(0, 128, 0, 0.2) !important;
+}
